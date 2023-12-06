@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:hover {
+  filter: brightness(0.8);
+  transition: 0.2s;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem "Poppins", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+:root {
+  --white: #ffffff;
+
+  --gray-800: #2b2b31;
+  --gray-900: #1a1a1d;
+
+  --yellow-500: #ffb731;
+
+  --red-500: #f31926;
+}
+
+header {
+  background-color: var(--gray-900);
+  padding: 20px 20px 30px 20px;
+}
+
+header > nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > nav > img {
+  width: 100px;
+}
+
+header > nav > button {
+  background-color: transparent;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  color: var(--white);
+  font-size: 1.6rem;
+  padding-top: 10px;
+}
+
+#dropdown {
+  position: absolute;
+  top: 98px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+  background-color: var(--gray-900);
+  overflow: hidden;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 0;
+}
+
+#dropdown.open {
+  border-top: 1px solid var(--gray-800);
+  height: 60px;
+}
+
+#dropdown li {
+  list-style: none;
+}
+
+#dropdown li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#cheapest {
+  background-image: url(./assets/slogam-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+  width: 100%;
+  height: 340px;
+  padding-top: 60px;
+  padding-left: 20px;
+  word-spacing: -6px;
+  font-size: 3rem;
+  line-height: 3.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#cheapest span {
+  color: var(--white);
+  font-weight: 500;
+}
+
+#cheapest strong {
+  color: var(--yellow-500);
+  font-weight: 700;
+}
+
+#info {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+#info > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#info > div > img {
+  width: 100px;
+  border-radius: 4px;
+}
+
+#info > div > strong {
+  margin-top: 10px;
+  color: var(--red-500);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+#info > div > span {
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--gray-800);
+}
+
+#units {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#units > a {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: var(--red-500);
+  color: var(--white);
+  padding: 10px;
+  font-size: 0.9rem;
+  border-radius: 2px;
+}
+
+footer {
+  background-color: var(--gray-900);
+  padding: 10px 20px;
+  margin-top: 40px;
+}
+
+#help {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#help span {
+  font-weight: 400;
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+#help strong {
+  color: var(--red-500);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+#help a {
+  margin-top: 4px;
+  color: var(--red-500);
+  font-weight: 400;
+  text-decoration: none;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+#help i {
+  color: var(--red-500);
+}
+
+#media {
+  margin-top: 10px;
+}
+
+#media > nav {
+  display: flex;
+  gap: 10px;
+}
+
+#media > span {
+  font-weight: 400;
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+#media > nav > a {
+  text-decoration: none;
+}
+
+#media > nav > a > img {
+  margin-top: 10px;
+  width: calc(84px / 4);
+  height: calc(84px / 4);
+}
+
+@media (min-width: 768px) {
+  #cheapest {
+    height: 600px;
+    font-size: 4rem;
+    line-height: 4rem;
+    padding-top: 160px;
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #cheapest {
+    height: 700px;
+    font-size: 5rem;
+    line-height: 6rem;
+    padding-top: 160px;
+    padding-left: 80px;
+  }
+
+  #info > div > img {
+    width: 180px;
+    border-radius: 4px;
+  }
+
+  #info > div > strong {
+    margin-top: 10px;
+    color: var(--red-500);
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  #info > div > span {
+    margin-top: -8px;
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+
+  #units > a {
+    margin-top: 40px;
+  }
+
+  #units > a {
+    padding: 14px;
+    font-size: 1.2rem;
+  }
+
+  footer {
+    margin-top: 80px;
+  }
+
+  #help span {
+    font-size: 1.4rem;
+  }
+
+  #help strong {
+    font-size: 2rem;
+  }
+
+  #help a {
+    gap: 10px;
+    font-size: 1.2rem;
+  }
+
+  #media > span {
+    font-size: 1.2rem;
+  }
+
+  #media > nav > a > img {
+    margin-top: 10px;
+    width: calc(84px / 3);
+    height: calc(84px / 3);
+  }
+}
