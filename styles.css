@@ -119,7 +119,8 @@ header > nav > button {
 }
 
 #info {
-  margin-top: 40px;
+  border-top: 2px solid var(--gray-800);
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,10 +169,36 @@ header > nav > button {
   border-radius: 2px;
 }
 
+#map {
+  border-top: 2px solid var(--gray-800);
+  margin-top: 40px;
+  background-image: url(./assets/second-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+}
+
+#map > div {
+  margin: 0 auto;
+  background-image: url(./assets/map.png);
+  width: calc(903px / 3.5);
+  height: calc(964px / 3.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+#map > div > img {
+  margin-top: 160px;
+  width: 120px;
+  height: 90px;
+  margin-left: auto;
+}
+
 footer {
+  border-top: 1px solid var(--gray-800);
   background-color: var(--gray-900);
   padding: 10px 20px;
-  margin-top: 40px;
 }
 
 #help {
@@ -278,8 +305,16 @@ footer {
     font-size: 1.2rem;
   }
 
-  footer {
-    margin-top: 80px;
+  #map > div {
+    width: calc(903px / 2);
+    height: calc(964px / 2);
+  }
+
+  #map > div > img {
+    margin-top: 140px;
+    width: 300px;
+    height: 200px;
+    margin-left: 340px;
   }
 
   #help span {
