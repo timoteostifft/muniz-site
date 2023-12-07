@@ -362,6 +362,11 @@ footer {
   #cheapest > div {
     padding: 0 4%;
   }
+
+  #info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 1280px) {
@@ -380,8 +385,6 @@ footer {
   }
 
   #info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 1200px;
     margin: 0 auto;
