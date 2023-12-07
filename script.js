@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  if (!getCookie("cookieAccepted")) {
+  if (!getCookie("muniz-site-cookies-accepted")) {
     document.getElementById("cookie-modal").style.display = "block";
     document.getElementById("overlay").style.display = "block";
   }
 });
 
 function acceptCookies() {
-  setCookie("cookieAccepted", true, 30);
+  setCookie("muniz-site-cookies-accepted", true, 30);
   document.getElementById("cookie-modal").style.display = "none";
   document.getElementById("overlay").style.display = "none";
 }
