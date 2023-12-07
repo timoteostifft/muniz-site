@@ -25,22 +25,26 @@ button:hover {
   --white: #ffffff;
 
   --gray-800: #2b2b31;
-  --gray-900: #1a1a1d;
+  --gray-900: #141416;
 
-  --yellow-500: #ffb731;
+  --yellow-500: #f7a308;
 
-  --red-500: #f31926;
+  --red-500: #ef0b1a;
 }
 
 header {
   background-color: var(--gray-900);
-  padding: 20px 20px 30px 20px;
+  padding: 0px 20px 0px 20px;
+  height: 100px;
 }
 
 header > nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 header > nav > img {
@@ -55,6 +59,10 @@ header > nav > button {
   color: var(--white);
   font-size: 1.6rem;
   padding-top: 10px;
+}
+
+header > nav > a {
+  display: none;
 }
 
 #dropdown {
@@ -99,18 +107,23 @@ header > nav > button {
   background-position: center left;
   width: 100%;
   height: 340px;
-  padding-top: 60px;
-  padding-left: 20px;
+  font-weight: 400;
   word-spacing: -6px;
   font-size: 3rem;
   line-height: 3.4rem;
+  color: var(--white);
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
 }
 
-#cheapest span {
-  color: var(--white);
-  font-weight: 500;
+#cheapest div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.38);
 }
 
 #cheapest strong {
@@ -119,7 +132,6 @@ header > nav > button {
 }
 
 #info {
-  border-top: 2px solid var(--gray-800);
   padding-top: 40px;
   display: flex;
   flex-direction: column;
@@ -166,7 +178,7 @@ header > nav > button {
   color: var(--white);
   padding: 10px;
   font-size: 0.9rem;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 #map {
@@ -260,26 +272,68 @@ footer {
 }
 
 @media (min-width: 768px) {
+  header > nav {
+    padding: 0 4%;
+  }
+
+  header > nav > button {
+    display: none;
+  }
+
+  header > nav > a {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--red-500);
+    color: var(--white);
+    font-size: 1.15rem;
+    display: block;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  #dropdown.open {
+    display: none;
+  }
+
   #cheapest {
     height: 600px;
     font-size: 4rem;
     line-height: 4rem;
-    padding-top: 160px;
-    padding-left: 40px;
+  }
+
+  #cheapest > div {
+    padding: 0 4%;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
+  header > nav {
+    padding: 0 20px;
+  }
+
   #cheapest {
     height: 700px;
     font-size: 5rem;
     line-height: 6rem;
-    padding-top: 160px;
-    padding-left: 80px;
+  }
+
+  #cheapest > div {
+    padding: 0 20px;
+  }
+
+  #info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 1200px;
+    margin: 0 auto;
   }
 
   #info > div > img {
-    width: 180px;
+    width: 140px;
     border-radius: 4px;
   }
 
@@ -287,11 +341,11 @@ footer {
     margin-top: 10px;
     color: var(--red-500);
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   #info > div > span {
-    margin-top: -8px;
+    margin-top: -4px;
     font-weight: 400;
     font-size: 1.4rem;
   }
