@@ -278,6 +278,12 @@ footer {
   padding: 10px 20px;
 }
 
+footer > div {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 .help {
   display: flex;
   flex-direction: column;
@@ -334,6 +340,15 @@ footer {
   margin-top: 10px;
   width: calc(84px / 4);
   height: calc(84px / 4);
+}
+
+footer > div:nth-child(2) {
+  margin-top: 10px;
+}
+
+footer > div:nth-child(2) > p {
+  text-align: justify;
+  color: var(--white);
 }
 
 @media (min-width: 768px) {
@@ -482,12 +497,9 @@ footer {
     padding: 20px;
   }
 
-  footer > div {
+  footer > div:nth-child(1) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    max-width: 1140px;
-    margin: 0 auto;
   }
 
   .help:nth-child(2) {
